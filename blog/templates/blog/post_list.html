@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>РОАТ</title>    
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Новости РОАТ</a></h1>
+        </div>
+
+        {% for post in posts %}
+            <div>
+                <hr>
+                <p>Опубликовано: {{ post.published_date }}</p>
+                <h3><a href="">{{ post.title }}</a></h3>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </body>
+</html>
